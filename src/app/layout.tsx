@@ -4,6 +4,7 @@ import { Header, ToTop } from "@/components";
 
 import { Golos_Text } from "next/font/google";
 import { ReactNode } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import cn from "classnames";
 
 const golosText = Golos_Text({
@@ -23,6 +24,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <Header />
         {children}
         <ToTop />
+        <SpeedInsights />
       </body>
     </html>
   );
