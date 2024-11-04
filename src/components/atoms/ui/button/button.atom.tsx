@@ -1,5 +1,6 @@
-import type { TButton } from "./index";
+import { raleway } from "@/app/layout";
 import cn from "classnames";
+import type { TButton } from "./index";
 
 export const Button = ({
   children,
@@ -26,6 +27,7 @@ export const Button = ({
         "font-medium uppercase transition-all duration-300",
         colorClassNames,
         paddingClassNames,
+        raleway.className,
       )}
     >
       {children}

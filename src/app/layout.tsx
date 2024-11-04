@@ -1,15 +1,19 @@
 import "./globals.css";
 
 import { Header, ToTop } from "@/components";
+import { Bodoni_Moda, Raleway } from "next/font/google";
 
-import { Golos_Text } from "next/font/google";
-import { ReactNode } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import cn from "classnames";
+import { ReactNode } from "react";
 
-const golosText = Golos_Text({
+export const raleway = Raleway({
   weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["cyrillic"],
+});
+
+const bodoni = Bodoni_Moda({
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 type RootLayoutProps = {
@@ -17,7 +21,7 @@ type RootLayoutProps = {
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {
-  const bodyClassNames = cn("bg-zinc-900", golosText.className);
+  const bodyClassNames = cn("bg-zinc-900", bodoni.className);
   return (
     <html lang="ru">
       <body className={cn(bodyClassNames)}>
