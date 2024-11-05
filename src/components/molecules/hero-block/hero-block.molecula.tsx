@@ -9,7 +9,7 @@ export const HeroBlock = () => {
       <h1 className="text-6xl font-bold uppercase tracking-wide max-lg:text-5xl">
         Ideal
       </h1>
-      <p className="text-center text-base max-lg:text-sm">
+      <p className="text-center text-lg max-lg:text-base">
         Создаём уникальные интерьеры, отражающие ваш стиль и образ жизни. Мы
         предлагаем комплексный подход – от разработки концепции до реализации
         проекта, с вниманием к каждой детали.
