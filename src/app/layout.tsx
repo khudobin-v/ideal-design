@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import { Header, ToTop } from "@/components";
-import { Bodoni_Moda, Raleway } from "next/font/google";
+import { Old_Standard_TT, Raleway } from "next/font/google";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import cn from "classnames";
@@ -12,9 +12,9 @@ export const raleway = Raleway({
   subsets: ["cyrillic"],
 });
 
-const bodoni = Bodoni_Moda({
-  weight: ["400", "500", "600", "700", "800", "900"],
-  subsets: ["latin-ext"],
+const oldStandart = Old_Standard_TT({
+  weight: ["400", "700"],
+  subsets: ["cyrillic", "cyrillic-ext"],
 });
 
 type RootLayoutProps = {
@@ -22,7 +22,7 @@ type RootLayoutProps = {
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {
-  const bodyClassNames = cn("bg-zinc-900", bodoni.className);
+  const bodyClassNames = cn("bg-zinc-900", oldStandart.className);
   return (
     <html lang="ru">
       <body className={cn(bodyClassNames)}>
