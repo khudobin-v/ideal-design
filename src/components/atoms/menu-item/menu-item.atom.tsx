@@ -1,7 +1,7 @@
 "use client";
 
-import { Link } from "react-scroll";
 import type { TMenuItem } from "@/components/atoms/menu-item/index";
+import { Link } from "react-scroll";
 
 export const MenuItem = ({ label, id }: TMenuItem) => {
   return (
