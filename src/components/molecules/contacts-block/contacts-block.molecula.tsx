@@ -7,7 +7,7 @@ import { IoIosMail } from "react-icons/io";
 
 export const ContactsBlock = () => {
   return (
-    <div className="flex h-full w-full flex-col justify-around">
+    <div className="flex h-[calc(100%-20px)] w-full flex-col justify-around">
       <h1 className="ml-20 text-5xl font-semibold uppercase max-sm:ml-4">
         Контакты
       </h1>
