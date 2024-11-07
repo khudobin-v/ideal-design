@@ -1,13 +1,13 @@
-import { FaMapPin, FaUser } from "react-icons/fa"
-import { FaPhone, FaVk } from "react-icons/fa6"
+import { FaMapPin, FaUser } from "react-icons/fa";
+import { FaPhone, FaVk } from "react-icons/fa6";
 
-import { FaInstagram } from "react-icons/fa"
-import { IoIosMail } from "react-icons/io"
-import Link from "next/link"
+import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 export const ContactsBlock = () => {
   return (
-    <div className="flex h-[calc(100%-20px)] w-full flex-col justify-around">
+    <div className="flex h-[88vh] w-full flex-col justify-end gap-12">
       <h1 className="ml-20 text-5xl font-semibold uppercase max-sm:ml-4">
         Контакты
       </h1>
@@ -70,7 +70,7 @@ export const ContactsBlock = () => {
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A011fdd511a86ac35f5d9c134fae5aae5868045b296b42486bef96253382cb93c&amp;source=constructor"
         width="100%"
         height="400"
-      ></iframe>
+      />
     </div>
   );
 };
