@@ -1,20 +1,15 @@
 import "./globals.css";
 
 import { Header, ToTop } from "@/components";
-import { Old_Standard_TT, Raleway } from "next/font/google";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import cn from "classnames";
+import { Golos_Text } from "next/font/google";
 import { ReactNode } from "react";
 
-export const raleway = Raleway({
+const golosText = Golos_Text({
   weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["cyrillic"],
-});
-
-const oldStandart = Old_Standard_TT({
-  weight: ["400", "700"],
-  subsets: ["cyrillic", "cyrillic-ext"],
 });
 
 type RootLayoutProps = {
@@ -22,7 +17,7 @@ type RootLayoutProps = {
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {
-  const bodyClassNames = cn("bg-zinc-900", oldStandart.className);
+  const bodyClassNames = cn("bg-zinc-900", golosText.className);
   return (
     <html lang="ru">
       <body className={cn(bodyClassNames)}>

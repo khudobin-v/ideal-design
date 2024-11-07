@@ -1,9 +1,9 @@
-import { FaMapPin, FaUser } from "react-icons/fa";
-import { FaPhone, FaVk } from "react-icons/fa6";
+import { FaMapPin, FaUser } from "react-icons/fa"
+import { FaPhone, FaVk } from "react-icons/fa6"
 
-import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa"
+import { IoIosMail } from "react-icons/io"
+import Link from "next/link"
 
 export const ContactsBlock = () => {
   return (
