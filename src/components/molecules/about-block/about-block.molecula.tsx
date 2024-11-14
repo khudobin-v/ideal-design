@@ -45,7 +45,7 @@ export const AboutBlock = () => {
         />
       </div>
 
-      <div className="flex flex-col gap-16 p-20 pt-0 max-md:gap-6">
+      <div className="flex flex-col gap-16 p-20 pt-0 max-md:gap-6 max-sm:p-8">
         <h1 className="text-4xl font-semibold uppercase text-black">
           Что мы предлагаем
         </h1>
