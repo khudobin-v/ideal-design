@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const AboutBlock = () => {
   return (
-    <div className="flex flex-row gap-60 p-20">
+    <div className="flex flex-row gap-60 p-20 max-xl:gap-40 max-sm:p-8">
       <div className="flex flex-col gap-16">
         <h1 className="text-4xl font-semibold uppercase text-black">
           О компании
@@ -11,7 +11,7 @@ export const AboutBlock = () => {
           <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-black font-medium text-white">
             1
           </div>
-          <p className="text-xl">
+          <p className="text-xl max-sm:text-lg">
             Дизайн студия IDEAL обладает более чем 1О-летним опытом в сфере
             оформления интерьеров и экстерьеров. Наша команда профессионалов
             создает уникальные проекты, которые гармонично сочетают
@@ -24,7 +24,7 @@ export const AboutBlock = () => {
           <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-black font-medium text-white">
             2
           </div>
-          <p className="text-xl">
+          <p className="text-xl max-sm:text-lg">
             Благодаря глубокому пониманию рынка и индивидуальному подходу к
             каждому клиенту. мы помогаем реализовать их мечты, создавая
             пространства, отражающие их личность и образ жизни.
@@ -36,7 +36,7 @@ export const AboutBlock = () => {
         width={854}
         height={1280}
         alt="About picture"
-        className="h-[85vh]"
+        className="h-[85vh] max-lg:hidden max-md:hidden max-sm:hidden"
       />
     </div>
   );
