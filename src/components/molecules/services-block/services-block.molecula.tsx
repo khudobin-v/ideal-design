@@ -1,6 +1,6 @@
 export const ServicesBlock = () => {
   return (
-    <div className="flex flex-col items-center gap-12 p-20">
+    <div className="flex flex-col items-center gap-12 p-20 max-sm:p-8">
       <h1 className="text-4xl font-semibold uppercase">Наши услуги</h1>
       <div className="grid w-full grid-cols-3 justify-between gap-12 max-lg:grid-cols-1">
         <div className="flex flex-col gap-3">
