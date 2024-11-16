@@ -5,7 +5,7 @@ export const ServicesBlock = () => {
       <div className="grid w-full grid-cols-3 justify-between gap-12 max-lg:grid-cols-1">
         <div className="flex flex-col gap-3">
           <h1 className="text-2xl font-medium">Дизайн-проект</h1>
-          <ul className="list-disc text-lg">
+          <ul className="list-disc text-lg max-lg:list-inside">
             <li>Проведение выезда на объект и измерение его параметров</li>
             <li>Осуществление измерений и фотофиксации пространства объекта</li>
             <li>Подготовка обмерного плана помещений</li>
@@ -33,7 +33,7 @@ export const ServicesBlock = () => {
         </div>
         <div className="flex flex-col gap-3">
           <h1 className="text-2xl font-medium">Технический проект</h1>
-          <ul className="list-disc text-lg">
+          <ul className="list-disc text-lg max-lg:list-inside">
             <li>Проведение выезда на объект и измерение его параметров</li>
             <li>Подготовка обмерного плана всех помещений</li>
             <li>Разработка плана демонтажа стен</li>
@@ -49,7 +49,7 @@ export const ServicesBlock = () => {
         </div>
         <div className="flex flex-col gap-3">
           <h1 className="text-2xl font-medium">Авторский надзор</h1>
-          <ul className="list-disc text-lg">
+          <ul className="list-disc text-lg max-lg:list-inside">
             <li>
               Осмотр и согласование выполненных работ с изначальными планами
             </li>
