@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["disk.yandex.ru"],
+    domains: ["s3.timeweb.cloud"],
   },
 };
 

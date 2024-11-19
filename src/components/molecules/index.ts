@@ -1,4 +1,5 @@
 import { AboutBlock } from "./about-block/index";
+import { Carousel } from "./carousel";
 import { ContactsBlock } from "./contacts-block/index";
 import { HeroBlock } from "./hero-block/index";
 import { Menu } from "./menu/index";
@@ -9,6 +10,7 @@ import { ToTop } from "./to-top/index";
 
 export {
   AboutBlock,
+  Carousel,
   ContactsBlock,
   HeroBlock,
   Menu,

@@ -1,21 +1,63 @@
-import { links } from "@/utils/links";
-import Image from "next/image";
+"use client";
+
+import { ListObjectsV2Command, S3Client, _Object } from "@aws-sdk/client-s3";
+import { useEffect, useState } from "react";
+
+import { Carousel } from "../carousel";
 
 export const ProjectsBlock = () => {
+  const [files, setFiles] = useState<_Object[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchFilesFromS3 = async () => {
+      const s3 = new S3Client({
+        region: "ru-1", // Параметр региона
+        endpoint: "https://s3.timeweb.cloud", // Параметр endpoint
+        credentials: {
+          accessKeyId: "ANM0GPRNKC48ORV9FAI1",
+          secretAccessKey: "Ceuh40v1BtFHA1uNqzMf6i2hjWz5PsJu8Bd5luUY",
+        },
+        forcePathStyle: true, // Для использования с Timeweb
+      });
+
+      try {
+        const data = await s3.send(
+          new ListObjectsV2Command({
+            Bucket: "64ef3069-ideal", // Ваш бакет
+          }),
+        );
+
+        // Устанавливаем файлы в состояние
+        setFiles(data.Contents || []);
+      } catch (err) {
+        console.error("Error fetching S3 files:", err);
+        setError("Ошибка при получении файлов из S3");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFilesFromS3();
+  }, []);
+
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex w-screen flex-col items-center justify-center gap-12">
       <h1 className="text-center text-6xl font-bold tracking-wide max-lg:text-5xl">
         Проекты
       </h1>
-      {links.map((link, index) => (
-        <Image
-          key={index}
-          src={link}
-          alt="project-photo"
-          width={100}
-          height={200}
-        />
-      ))}
+      <Carousel images={files} />
+      {/* <ul>
+        {files.map((file) => (
+          <li key={file.Key}>
+            <img
+              src={`https://s3.timeweb.cloud/64ef3069-ideal/${file.Key}`}
+              rel="noopener noreferrer"
+            ></img>
+          </li>
+        ))}
+      </ul> */}
     </div>
   );
 };

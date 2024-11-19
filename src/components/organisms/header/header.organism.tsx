@@ -23,7 +23,7 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "fixed flex w-full flex-col gap-3 px-4 py-4 max-xl:py-3 max-sm:py-2 sm:px-4 md:px-6 lg:px-12 xl:px-24 1.5xl:px-16 2xl:px-32",
+        "fixed z-50 flex w-full flex-col gap-3 px-4 py-4 max-xl:py-3 max-sm:py-2 sm:px-4 md:px-6 lg:px-12 xl:px-24 1.5xl:px-16 2xl:px-32",
         blurClassNames,
       )}
     >
@@ -54,7 +54,7 @@ export const Header = () => {
       {isOpened && (
         <div
           className={cn(
-            "animate-appearance hidden flex-col pb-2 max-1.5xl:flex",
+            "hidden animate-appearance flex-col pb-2 max-1.5xl:flex",
             openedBlurClassNames,
           )}
         >
