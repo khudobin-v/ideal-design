@@ -21,7 +21,7 @@ export const Carousel = ({ images }: CarouselProps) => {
   };
 
   return (
-    <div className="w-1/2">
+    <div className="w-1/2 max-xl:w-[70%] max-lg:w-[75%] max-md:w-[80%] max-sm:w-[90%]">
       <Slider {...settings}>
         {images.map((image: any) => (
           <div

@@ -43,21 +43,11 @@ export const ProjectsBlock = () => {
   }, []);
 
   return (
-    <div className="flex w-screen flex-col items-center justify-center gap-12">
+    <div className="flex min-h-screen w-screen flex-col items-center justify-center gap-12 p-20 max-sm:p-8">
       <h1 className="text-center text-6xl font-bold tracking-wide max-lg:text-5xl">
         Проекты
       </h1>
       <Carousel images={files} />
-      {/* <ul>
-        {files.map((file) => (
-          <li key={file.Key}>
-            <img
-              src={`https://s3.timeweb.cloud/64ef3069-ideal/${file.Key}`}
-              rel="noopener noreferrer"
-            ></img>
-          </li>
-        ))}
-      </ul> */}
     </div>
   );
 };
