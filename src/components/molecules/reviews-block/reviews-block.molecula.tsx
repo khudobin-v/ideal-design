@@ -1,13 +1,13 @@
 export const ReviewsBlock = () => {
   return (
-    <div className="flex w-full flex-row items-center justify-center gap-16  p-20 max-xl:flex-col max-lg:flex-col max-lg:gap-20 max-md:gap-16 max-sm:flex-col max-sm:gap-12 max-sm:p-8">
+    <div className="flex w-full flex-row items-center justify-center gap-16 p-20 max-xl:flex-col max-lg:flex-col max-lg:gap-20 max-md:gap-16 max-sm:flex-col max-sm:gap-12 max-sm:p-8">
       <h1 className="flex-shrink-0 text-center text-6xl font-bold tracking-wide max-lg:text-5xl">
         Наши отзывы
       </h1>
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-4">
-            <div className="h-12 w-12 items-center rounded-full bg-white" />
+            <div className="h-12 w-12 items-center rounded-full bg-white text-center" />
             <h3>Иван</h3>
           </div>
           <p>
